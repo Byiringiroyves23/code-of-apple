@@ -1,0 +1,58 @@
+public/index.html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Auth (Demo)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Apple</h1>
+
+    <div class="tabs">
+      <button id="show-login" class="active">login</button>
+      <button id="show-signup">sign up</button>
+      <button id="show-reset">I forget password</button>
+    </div>
+
+    <section id="login-section" class="panel">
+      <h2>Login</h2>
+      <label>Username <input id="login-username" /></label>
+      <label>Password <input id="login-password" type="password" /></label>
+      <button id="login-btn">Login</button>
+      <div id="login-msg" class="msg"></div>
+    </section>
+
+    <section id="signup-section" class="panel hidden">
+      <h2>Sign up</h2>
+      <div class="small">sign up condition</div>
+      <label>Username <input id="signup-username" /></label>
+      <label>Password <input id="signup-password" type="password" /></label>
+      <label>New password <input id="signup-newpassword" type="password" placeholder="repeat password" /></label>
+      <label>Email <input id="signup-email" /></label>
+      <label>Password of email <input id="signup-emailpass" type="password" /></label>
+      <label>Telephone <input id="signup-telephone" /></label>
+      <button id="signup-btn">Create account</button>
+      <div id="signup-msg" class="msg"></div>
+    </section>
+
+    <section id="reset-section" class="panel hidden">
+      <h2>Reset Password</h2>
+      <label>Email <input id="reset-email" /></label>
+      <button id="request-reset-btn">Request reset token</button>
+
+      <div class="divider">— or —</div>
+
+      <label>Reset token <input id="reset-token" /></label>
+      <label>New password <input id="reset-newpassword" type="password" /></label>
+      <button id="reset-btn">Reset password</button>
+
+      <div id="reset-msg" class="msg"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
